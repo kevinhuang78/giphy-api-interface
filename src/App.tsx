@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import './sass/index.scss';
 import configureStore from "./reducers/configureStore";
 import Homepage from "./screens/Homepage";
+import DevTools from "./helpers/DevTools";
 
 const store = configureStore();
 
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Router>
           <Provider store={store}>
               <Route path="/" component={Homepage} />
+              { process.env.NODE_ENV === "development" && <DevTools /> }
           </Provider>
       </Router>
   );
