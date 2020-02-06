@@ -1,7 +1,7 @@
 import { gifConstants } from "../actions";
 
 export interface IGifData {
-    randomGif?: {
+    randomGif: {
         id: string;
         image_url: string;
         title: string;
@@ -10,7 +10,11 @@ export interface IGifData {
 
 const entities = (
     state: IGifData = {
-        randomGif: undefined
+        randomGif: {
+            id: "123456789",
+            image_url: "http://placecorgi.com/260/180",
+            title: "Corgi"
+        }
     },
     action: any
 ): IGifData => {
@@ -18,7 +22,11 @@ const entities = (
         case gifConstants.GET_RANDOM_GIF_REQUEST:
             return {
                 ...state,
-                randomGif: undefined
+                randomGif: {
+                    id: "123456789",
+                    image_url: "http://placecorgi.com/260/180",
+                    title: "Corgi"
+                }
             };
         case gifConstants.GET_RANDOM_GIF_SUCCESS:
             return {
@@ -28,7 +36,11 @@ const entities = (
         case gifConstants.GET_RANDOM_GIF_FAILURE:
             return {
                 ...state,
-                randomGif: undefined
+                randomGif: {
+                    id: "123456789",
+                    image_url: "http://placecorgi.com/260/180",
+                    title: "Corgi"
+                }
             };
         default:
             return state;

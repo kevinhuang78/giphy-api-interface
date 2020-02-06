@@ -6,7 +6,7 @@ import { Row, Col } from "antd";
 import Gif from "../components/Gif";
 
 interface IProps {
-    randomGif?: {
+    randomGif: {
         id: string;
         image_url: string;
         title: string;
@@ -23,13 +23,11 @@ const Homepage = (props: IProps) => {
                     <h1 className="homepage__title">Page d'accueil</h1>
                 </Col>
             </Row>
-            {randomGif && (
-                <Row type="flex" justify="center">
-                    <Col span={8}>
-                        <Gif image_url={randomGif.image_url} title={randomGif.title} />
-                    </Col>
-                </Row>
-            )}
+            <Row type="flex" justify="center">
+                <Col span={8}>
+                    <Gif image_url={randomGif.image_url} title={randomGif.title} />
+                </Col>
+            </Row>
         </div>
     );
 };
