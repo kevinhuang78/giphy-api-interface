@@ -1,8 +1,9 @@
 /** ANTD CSS */
 @import "~antd/dist/antd.min.css";
 
-/** Screens */
-@import "screens/Homepage";
-
 /** Components */
 @import "components/gif";
+@import "components/layout";
+
+/** Helpers */
+@import "helpers";
