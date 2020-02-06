@@ -41,7 +41,7 @@
     "eject": "react-scripts eject"
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.tsx": [
       "prettier --write --tab-width 4 --print-width 130",
       "git add"
     ]
