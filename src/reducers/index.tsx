@@ -6,6 +6,13 @@ export interface IGifData {
         image_url: string;
         title: string;
     };
+    searchedGifs: [
+        {
+            id: string;
+            image_url: string;
+            title: string;
+        }
+    ];
 }
 
 const entities = (
@@ -14,7 +21,14 @@ const entities = (
             id: "123456789",
             image_url: "http://placecorgi.com/260/180",
             title: "Corgi"
-        }
+        },
+        searchedGifs: [
+            {
+                id: "123456789",
+                image_url: "http://placecorgi.com/260/180",
+                title: "Corgi"
+            }
+        ]
     },
     action: any
 ): IGifData => {
@@ -41,6 +55,33 @@ const entities = (
                     image_url: "http://placecorgi.com/260/180",
                     title: "Corgi"
                 }
+            };
+        case gifConstants.GET_SEARCHED_GIFS_REQUEST:
+            return {
+                ...state,
+                searchedGifs: [
+                    {
+                        id: "123456789",
+                        image_url: "http://placecorgi.com/260/180",
+                        title: "Corgi"
+                    }
+                ]
+            };
+        case gifConstants.GET_SEARCHED_GIFS_SUCCESS:
+            return {
+                ...state,
+                searchedGifs: action.data
+            };
+        case gifConstants.GET_SEARCHED_GIFS_FAILURE:
+            return {
+                ...state,
+                searchedGifs: [
+                    {
+                        id: "123456789",
+                        image_url: "http://placecorgi.com/260/180",
+                        title: "Corgi"
+                    }
+                ]
             };
         default:
             return state;

@@ -6,6 +6,7 @@ import configureStore from "./reducers/configureStore";
 import Homepage from "./screens/Homepage";
 import DevTools from "./utils/DevTools";
 import Error404 from "./screens/Error404";
+import SearchScreen from "./screens/SearchScreen";
 
 const store = configureStore();
 
@@ -14,6 +15,7 @@ const App: React.FC = () => (
         <Provider store={store}>
             <Switch>
                 <Route exact path="/" component={Homepage} />
+                <Route exact path="/search" component={SearchScreen} />
                 <Route component={Error404} />
             </Switch>
             {process.env.NODE_ENV === "development" && <DevTools />}
