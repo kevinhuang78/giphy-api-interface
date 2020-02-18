@@ -35,7 +35,7 @@ const SearchScreen = (props: IProps) => {
     };
 
     return (
-        <AppLayout defaultSelectedKeys={["home"]}>
+        <AppLayout defaultSelectedKeys={["search"]}>
             <Row type="flex" justify="center">
                 <Col span={8}>
                     <h1 className="text-center">Page de recherche</h1>
@@ -53,13 +53,22 @@ const SearchScreen = (props: IProps) => {
                 </Col>
             </Row>
             <Row type="flex" justify="center">
-                {searchedGifs &&
-                    searchedGifs.length > 0 &&
+                {searchedGifs && searchedGifs.length > 0 ? (
                     searchedGifs.map(gif => (
                         <Col key={gif.id} span={8}>
                             <Gif image_url={gif.image_url} title={gif.title} />
                         </Col>
-                    ))}
+                    ))
+                ) : (
+                    <Col span={8}>
+                        <Gif
+                            image_url={
+                                "https://media3.giphy.com/media/14uQ3cOFteDaU/giphy.gif?cid=790b76116575967dd37c55dc00021cb4d3c30ea11bb1c6f2&rid=giphy.gif"
+                            }
+                            title="Aucun GIF trouvé - Erreur 404"
+                        />
+                    </Col>
+                )}
             </Row>
         </AppLayout>
     );

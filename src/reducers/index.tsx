@@ -19,14 +19,16 @@ const entities = (
     state: IGifData = {
         randomGif: {
             id: "123456789",
-            image_url: "http://placecorgi.com/260/180",
-            title: "Corgi"
+            image_url:
+                "https://media3.giphy.com/media/TvLuZ00OIADoQ/giphy.gif?cid=790b76118f3dd2ed1499aaa87b0eb3f759ca513fa707f471&rid=giphy.gif",
+            title: "Loading"
         },
         searchedGifs: [
             {
                 id: "123456789",
-                image_url: "http://placecorgi.com/260/180",
-                title: "Corgi"
+                image_url:
+                    "https://media3.giphy.com/media/TvLuZ00OIADoQ/giphy.gif?cid=790b76118f3dd2ed1499aaa87b0eb3f759ca513fa707f471&rid=giphy.gif",
+                title: "Loading"
             }
         ]
     },
@@ -38,8 +40,9 @@ const entities = (
                 ...state,
                 randomGif: {
                     id: "123456789",
-                    image_url: "http://placecorgi.com/260/180",
-                    title: "Corgi"
+                    image_url:
+                        "https://media3.giphy.com/media/TvLuZ00OIADoQ/giphy.gif?cid=790b76118f3dd2ed1499aaa87b0eb3f759ca513fa707f471&rid=giphy.gif",
+                    title: "Loading"
                 }
             };
         case gifConstants.GET_RANDOM_GIF_SUCCESS:
@@ -52,8 +55,9 @@ const entities = (
                 ...state,
                 randomGif: {
                     id: "123456789",
-                    image_url: "http://placecorgi.com/260/180",
-                    title: "Corgi"
+                    image_url:
+                        "https://media1.giphy.com/media/mq5y2jHRCAqMo/giphy.gif?cid=790b7611ac8051612cad33f267b20f66165b8764727ff49f&rid=giphy.gif",
+                    title: "Error"
                 }
             };
         case gifConstants.GET_SEARCHED_GIFS_REQUEST:
@@ -62,8 +66,9 @@ const entities = (
                 searchedGifs: [
                     {
                         id: "123456789",
-                        image_url: "http://placecorgi.com/260/180",
-                        title: "Corgi"
+                        image_url:
+                            "https://media3.giphy.com/media/TvLuZ00OIADoQ/giphy.gif?cid=790b76118f3dd2ed1499aaa87b0eb3f759ca513fa707f471&rid=giphy.gif",
+                        title: "Loading"
                     }
                 ]
             };
@@ -78,8 +83,9 @@ const entities = (
                 searchedGifs: [
                     {
                         id: "123456789",
-                        image_url: "http://placecorgi.com/260/180",
-                        title: "Corgi"
+                        image_url:
+                            "https://media1.giphy.com/media/mq5y2jHRCAqMo/giphy.gif?cid=790b7611ac8051612cad33f267b20f66165b8764727ff49f&rid=giphy.gif",
+                        title: "Error"
                     }
                 ]
             };

@@ -19,7 +19,7 @@ const AppLayout: React.FC<IProps> = props => (
                         <span>Page d'accueil</span>
                     </Link>
                 </Menu.Item>
-                <Menu.Item key="traffic">
+                <Menu.Item key="search">
                     <Link to="/search">
                         <Icon type="search" />
                         <span>Recherche de GIF</span>
