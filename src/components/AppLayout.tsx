@@ -14,13 +14,13 @@ const AppLayout: React.FC<IProps> = props => (
             <Menu theme="dark" mode="inline" defaultSelectedKeys={props.defaultSelectedKeys}>
                 <img className="layout__logo" src={Logo} alt="Logo Giphy" />
                 <Menu.Item key="home">
-                    <Link to="/giphy-api-interface">
+                    <Link to="/">
                         <Icon type="home" />
                         <span>Page d'accueil</span>
                     </Link>
                 </Menu.Item>
                 <Menu.Item key="search">
-                    <Link to="/giphy-api-interface/search">
+                    <Link to="/search">
                         <Icon type="search" />
                         <span>Recherche de GIF</span>
                     </Link>

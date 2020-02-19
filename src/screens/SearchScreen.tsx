@@ -29,7 +29,7 @@ const SearchScreen = (props: IProps) => {
 
     const handleSearch = () => {
         props.history.push({
-            pathname: "/giphy-api-interface/search",
+            pathname: "/search",
             search: `?search=${searchValue}`
         });
     };
