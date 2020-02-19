@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/giphy-api-interface/precache-manifest.4449326562c4b4f70170a1333388873a.js"
+  "/giphy-api-interface/precache-manifest.adaba2100b21388a567c98922475df01.js"
 );
 
 self.addEventListener('message', (event) => {
